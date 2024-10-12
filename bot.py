@@ -74,7 +74,7 @@ def generate_image(track: dict, template_path: str, css_path: str, images_paths:
     img_buffer = BytesIO()
     img_buffer.seek(0)
 
-    wkhtmltoimage_route = '/usr/local/bin/wkhtmltopdf' if platform.system() != 'Windows' else 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe'
+    wkhtmltoimage_route = '/usr/local/bin/wkhtmltoimage' if platform.system() != 'Windows' else 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe'
     configuration = imgkit.config(wkhtmltoimage=wkhtmltoimage_route)
     options = {
         'format': 'png',
