@@ -31,6 +31,8 @@
             margin-top: 30px;
         }
         .container-track-image {
+            top: 10%;
+            left: 40px;
             width: 569px;
             height: 569px;
         }
@@ -38,9 +40,11 @@
         .d-wb {
             display: -webkit-box;
         }
+        /* NOTE: wkhtmltopdf uses "-webkit-transform" instead of "transform: translateY();". */
         .div-flower-icon {
             position: absolute;
-            top: 235px;
+            top: 50%;
+            -webkit-transform: translateY(-55%);
             left: 560px;
         }
         .div-track-data {
@@ -49,7 +53,8 @@
         }
         .div-track-image {
             position: absolute;
-            top: 40px;
+            top: 50%;
+            -webkit-transform: translateY(-55%);
             left: 40px;
         }
         .fs-36 {
@@ -148,7 +153,7 @@
         </div>
         <div class="container-image-info">
             <h1 class="fs-64 text-color-pink mb-10 track-title">
-            {{track_name}}
+                {{track_name}}
             </h1>
             <div class="horizontal-line mb-10 bg-green"></div>
             <div class="d-wb div-year fs-36 text-color-white">
@@ -181,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div class="d-wb mw-100 mt-10 ml-30">
+    <div class="d-wb mw-100 mt-50 ml-30">
         <div class="d-wb box-align-center mb-10 w-70">
             <img src="{{spotify_icon}}" width="44px" height="44px">
             <p class="fs-36 ml-20 text-color-white">*Basado en el algoritmo de Spotify | 0 - 100</p>
